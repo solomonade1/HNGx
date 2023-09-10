@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Personal Page</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* Add your CSS styles here */
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="container">
+        <div class="logo">HNGx</div>
+        <div class="center">
+          <img class="search" src="./public/search.svg" alt="search" />
+          <input placeholder="search" type="text" />
+        </div>
+        <div class="lists">
+          <ul>
+            <li>
+              <a href="#">Find People</a>
+            </li>
+            <li>
+              <a href="#">Find People</a>
+            </li>
+            <li>
+              <a href="#">Messages <span class="messageNo">4</span></a>
+            </li>
+            <li>
+              <a class="profilePic" href="#"
+                ><img
+                  class="profileImg"
+                  src="./public/Solomonprofile.jpg"
+                  alt="profile" />
+                <div class="profileIcon"></div
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="hero">
+      <div class="heroContainer">
+        <div class="heroLeft">
+          <div class="imgContainer">
+            <img
+              src="./public/Solomonprofile.jpg"
+              alt="solomon Adegboyega"
+              data-testid="SolomonAdegboyega"
+            />
+          </div>
+        </div>
+        <div class="heroRight">
+            <div class="rightContainer">
+                <div class="rightContainerTop">
+                    <h1 data-testid="solomonAdegboyega">Solomon Adegboyega</h1>
+                    <p data-testid="Frontend">Frontend</p>
+                </div>
+                <div class="rightContainerBottom">
+                  
+                    <p data-testid="currentDayOfTheWeek"></p>
+                    <p data-testid="currentUTCTime"></p>
+                    <p data-testid="currentTime"></p>
+                </div>
+                <div class="rightContainerGithub">
+                   <p>souce code: <span>
+                    <a class="github" href="#">github profile</a>
+                   </span></p>
+                   
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="./script.js"></script>
+  </body>
+</html>
