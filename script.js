@@ -17,7 +17,7 @@
     // Get the current UTC time
     const uTCTime = currentDate;
     //   const uTCTime = currentDate.toISOString();
-    const currentUTCTime = currentDate.getTime();
+    const currentUTCTime = currentDate.getMilliseconds();
 
     // Update the elements with their respective data-testid attributes
     document.querySelector(
@@ -37,8 +37,11 @@
     const hours = currentTime.getUTCHours().toString().padStart(2, '0');
     const minutes = currentTime.getUTCMinutes().toString().padStart(2, '0');
     const seconds = currentTime.getUTCSeconds().toString().padStart(2, '0');
+    const milliSeconds = currentTime.getMilliseconds().toLocaleString().padStart(1, '0');
     
-    timeElement.textContent = `Current Time: ${hours}:${minutes}:${seconds}`;
+    
+    
+    timeElement.innerHTML = `Current Time: ${hours}:${minutes}:${seconds}<br />Time in Milliseconds: ${milliSeconds}`;
 }
 
 // Update the clock every second
