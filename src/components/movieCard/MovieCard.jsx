@@ -24,15 +24,17 @@ const MovieCard = async ({ movie }) => {
 
 
   return (
-    <Link href={`/movies/${movie.id}`}>
+    <Link href={`/movies/${movie.id}`} data-testid="movie-card">
             <div className={styles.container}>
                 <Image className={styles.favorite} src="/Favorite.svg" alt="imdb" width={30} height={30} />
                 <div className={styles.poster}>
-                    <Image src="/travel.png" alt="imdb" width={250} height={343} />
+                    <Image  data-testid="movie-poster"  src={`https://image.tmdb.org/t/p/original/${movie.backdrop_path || movie.poster_path
+                        }`} alt={movie.title} width={250} height={220} placeholder="blur"
+                        blurDataURL="/spinner.svg" />
                 </div>
                 <div className={styles.bottom}>
-                    <span className={styles.country}> {country}{", "} {year} </span>
-                    <h2 className={styles.title}>{movie.title}  </h2>
+                    <span className={styles.country}> {country}{", "} <span data-testid="movie-release-date"> {year} </span> </span>
+                    <h2 className={styles.title} data-testid="movie-title">{movie.title}  </h2>
                     <div className={styles.rating}>
                         <div className={styles.ratingLeft}>
                             <Image src="/imdb.svg" alt="imdb" width={35} height={17} />

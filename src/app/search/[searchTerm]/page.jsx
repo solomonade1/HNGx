@@ -24,11 +24,11 @@ export default async function SearchPage({ params }) {
         <Navbar />
         <Hero />
     {results && results.length === 0 && (
-                <h1 className={styles.header}>No results found</h1>
+                <h1 className={styles.header}>No results found for: <span className={styles.headerText}>{params.searchTerm} </span></h1>
             )}
 
 {results && results.length > 0 && (
-                <h1 className={styles.header}>Search Result for: {}</h1>
+                <h1 className={styles.header}>Search Result for: <span className={styles.headerText}>{params.searchTerm} </span> </h1>
             )}
 
             {results && <Results results={results} />}

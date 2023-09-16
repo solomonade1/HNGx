@@ -31,7 +31,10 @@ const FeaturedItem = async ({ movie }) => {
                 <Image className={styles.favorite} src="/Favorite.svg" alt="imdb" width={30} height={30} />
 
                 <div className={styles.poster}>
-                    <Image data-testid="movie-poster" className={styles.posterImg}  src="/travel.png" alt="imdb" width={250} height={220} />
+                    <Image data-testid="movie-poster" className={styles.posterImg} src={`https://image.tmdb.org/t/p/original/${movie.backdrop_path || movie.poster_path
+                        }`} alt={movie.title} width={250} height={220} placeholder="blur"
+                        blurDataURL="/spinner.svg"
+                    />
                 </div>
                 <div className={styles.bottom}>
                     <span className={styles.country}> {country}{", "} <span data-testid="movie-release-date"> {year} </span> </span>
