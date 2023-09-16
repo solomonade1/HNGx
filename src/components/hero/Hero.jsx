@@ -21,7 +21,7 @@ const Hero = () => {
             <span>97%</span>
           </div>
         </div>
-        <p className={styles.leftDesc}>John Wick is on the run after killing a member of the international assassins' guild, and with a $14 million price tag on his head, he is the target of hit men and women everywhere.</p>
+        <p className={styles.leftDesc}>John Wick is on the run after killing a member of the international assassins guild, and with a $14 million price tag on his head, he is the target of hit men and women everywhere.</p>
         <Link href="#"><Image src="/watch-btn.svg" alt="watch-btn" width={170} height={36} /> </Link>
       </div>
       <div className={styles.right}>
